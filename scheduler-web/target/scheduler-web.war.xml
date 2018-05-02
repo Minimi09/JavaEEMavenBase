@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive>
+  <dir sourceOnDisk="C:\Users\JAVA1\Documents\Repositorio\JavaEEMavenBase\scheduler-web\target\classes" targetInArchive="/WEB-INF/classes" />
+  <file sourceOnDisk="C:\Users\JAVA1\.m2\repository\com\google\code\gson\gson\2.2.4\gson-2.2.4.jar" targetInArchive="/WEB-INF/lib/gson-2.2.4.jar" />
+  <file sourceOnDisk="C:\Users\JAVA1\.m2\repository\org\jboss\logging\jboss-logging\3.3.0.Final\jboss-logging-3.3.0.Final.jar" targetInArchive="/WEB-INF/lib/jboss-logging-3.3.0.Final.jar" />
+  <file sourceOnDisk="C:\Users\JAVA1\.m2\repository\org\apache\httpcomponents\httpclient\4.5.4\httpclient-4.5.4.jar" targetInArchive="/WEB-INF/lib/httpclient-4.5.4.jar" />
+  <file sourceOnDisk="C:\Users\JAVA1\.m2\repository\org\apache\httpcomponents\httpcore\4.4.7\httpcore-4.4.7.jar" targetInArchive="/WEB-INF/lib/httpcore-4.4.7.jar" />
+  <file sourceOnDisk="C:\Users\JAVA1\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar" targetInArchive="/WEB-INF/lib/commons-logging-1.2.jar" />
+  <file sourceOnDisk="C:\Users\JAVA1\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar" targetInArchive="/WEB-INF/lib/commons-codec-1.10.jar" />
+  <file sourceOnDisk="C:\Users\JAVA1\.m2\repository\com\auth0\java-jwt\3.3.0\java-jwt-3.3.0.jar" targetInArchive="/WEB-INF/lib/java-jwt-3.3.0.jar" />
+  <file sourceOnDisk="C:\Users\JAVA1\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.9.2\jackson-databind-2.9.2.jar" targetInArchive="/WEB-INF/lib/jackson-databind-2.9.2.jar" />
+  <file sourceOnDisk="C:\Users\JAVA1\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar" targetInArchive="/WEB-INF/lib/jackson-annotations-2.9.0.jar" />
+  <file sourceOnDisk="C:\Users\JAVA1\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.9.2\jackson-core-2.9.2.jar" targetInArchive="/WEB-INF/lib/jackson-core-2.9.2.jar" />
+  <file sourceOnDisk="C:\Users\JAVA1\.m2\repository\javax\javaee-api\7.0\javaee-api-7.0.jar" targetInArchive="/WEB-INF/lib/javaee-api-7.0.jar" />
+  <file sourceOnDisk="C:\Users\JAVA1\.m2\repository\com\sun\mail\javax.mail\1.5.0\javax.mail-1.5.0.jar" targetInArchive="/WEB-INF/lib/javax.mail-1.5.0.jar" />
+  <file sourceOnDisk="C:\Users\JAVA1\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar" targetInArchive="/WEB-INF/lib/activation-1.1.jar" />
+  <file sourceOnDisk="C:\Users\JAVA1\.m2\repository\com\thetransactioncompany\cors-filter\2.6\cors-filter-2.6.jar" targetInArchive="/WEB-INF/lib/cors-filter-2.6.jar" />
+  <file sourceOnDisk="C:\Users\JAVA1\.m2\repository\com\thetransactioncompany\java-property-utils\1.9.1\java-property-utils-1.9.1.jar" targetInArchive="/WEB-INF/lib/java-property-utils-1.9.1.jar" />
+  <file sourceOnDisk="C:\Users\JAVA1\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar" targetInArchive="/WEB-INF/lib/commons-lang-2.6.jar" />
+  <file sourceOnDisk="C:\Users\JAVA1\.m2\repository\org\apache\commons\commons-lang3\3.4\commons-lang3-3.4.jar" targetInArchive="/WEB-INF/lib/commons-lang3-3.4.jar" />
+  <file sourceOnDisk="C:\Users\JAVA1\.m2\repository\org\slf4j\slf4j-api\1.5.2\slf4j-api-1.5.2.jar" targetInArchive="/WEB-INF/lib/slf4j-api-1.5.2.jar" />
+  <file sourceOnDisk="C:\Users\JAVA1\.m2\repository\org\slf4j\jcl-over-slf4j\1.5.2\jcl-over-slf4j-1.5.2.jar" targetInArchive="/WEB-INF/lib/jcl-over-slf4j-1.5.2.jar" />
+  <file sourceOnDisk="C:\Users\JAVA1\.m2\repository\org\slf4j\slf4j-log4j12\1.5.2\slf4j-log4j12-1.5.2.jar" targetInArchive="/WEB-INF/lib/slf4j-log4j12-1.5.2.jar" />
+  <file sourceOnDisk="C:\Users\JAVA1\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar" targetInArchive="/WEB-INF/lib/log4j-1.2.16.jar" />
+  <dir sourceOnDisk="C:\Users\JAVA1\Documents\Repositorio\JavaEEMavenBase\scheduler-web\src\main\webapp" targetInArchive="/" />
+  <file sourceOnDisk="C:\Users\JAVA1\Documents\Repositorio\JavaEEMavenBase\scheduler-web\src\main\webapp\WEB-INF\web.xml" targetInArchive="/WEB-INF/web.xml" />
+  <file sourceOnDisk="C:\Users\JAVA1\Documents\Repositorio\JavaEEMavenBase\scheduler-web\src\main\webapp\WEB-INF\weblogic.xml" targetInArchive="/WEB-INF/weblogic.xml" />
+  <archive targetInArchive="/WEB-INF/lib/scheduler-model-1.0.jar">
+    <dir sourceOnDisk="C:\Users\JAVA1\Documents\Repositorio\JavaEEMavenBase\scheduler-model\target\classes" targetInArchive="/" />
+  </archive>
+  <archive targetInArchive="/WEB-INF/lib/scheduler-commons-1.0.jar">
+    <dir sourceOnDisk="C:\Users\JAVA1\Documents\Repositorio\JavaEEMavenBase\scheduler-commons\target\classes" targetInArchive="/" />
+  </archive>
+  <archive targetInArchive="/WEB-INF/lib/scheduler-services-1.0.jar">
+    <dir sourceOnDisk="C:\Users\JAVA1\Documents\Repositorio\JavaEEMavenBase\scheduler-services\target\classes" targetInArchive="/" />
+  </archive>
+  <archive targetInArchive="/WEB-INF/lib/scheduler-persistence-1.0.jar">
+    <dir sourceOnDisk="C:\Users\JAVA1\Documents\Repositorio\JavaEEMavenBase\scheduler-persistence\target\classes" targetInArchive="/" />
+  </archive>
+</archive>
+
