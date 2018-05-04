@@ -1,14 +1,23 @@
 package mx.com.cinepolis.scheduler.service.impl;
 
+import mx.com.arquitectura.base.model.UserDO;
 import mx.com.cinepolis.scheduler.commons.to.CatalogTO;
 import mx.com.cinepolis.scheduler.commons.to.UserTO;
+import mx.com.cinepolis.scheduler.data.persistence.dao.UserDAO;
 import mx.com.cinepolis.scheduler.service.CatalogService;
 
+import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+
+//Realmente aqui van las llamadas a los queries
+//Revisar mi fuente de informacion, si ya tengo los queries que me ayudan
 
 public class CatalogServiceImpl implements CatalogService{
 
+    @Inject
+    private UserDAO userDAO;
     /**
      * {@inheritDoc}
      */
@@ -17,8 +26,10 @@ public class CatalogServiceImpl implements CatalogService{
         UserTO userTO = new UserTO();
         userTO.setIdUser(1L);
         userTO.setName("Javier");
-        userTO.setEmail("francisco.rodriguez@axity.com.mx");
-        userTO.setUserName("jrodriguez");
+        userTO.setAvatarUrl(" ");
+        userTO.setFollowers(1);
+        userTO.setFollowing(1);
+        userTO.setLogin("gatito");
         return userTO;
     }
 
@@ -42,7 +53,7 @@ public class CatalogServiceImpl implements CatalogService{
                     setId(3);
                 }});
         }
-        else
+        else if (pais.equals("USA"))
         {   estados.add(new CatalogTO() {
                 {
                     setName("Texas");
@@ -61,5 +72,21 @@ public class CatalogServiceImpl implements CatalogService{
         }
 
         return estados;
+    }
+
+    @Override
+    public List<UserTO> getAllUsers() {
+
+        List<UserDO> usersList = userDAO.findAll();
+        return usersList
+                .stream()
+                .map(x ->new UserTO(){{
+                setLogin(x.getLogin());
+                setFollowing(x.getFollowing());
+                setAvatarUrl(x.getAvatarUrl());
+                setIdUser(x.getIdUser());
+                setName(x.getName());
+                setFollowers(x.getFollowers());
+            }}).collect(Collectors.toList());
     }
 }
