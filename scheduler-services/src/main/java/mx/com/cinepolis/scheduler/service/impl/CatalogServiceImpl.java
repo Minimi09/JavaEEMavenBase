@@ -89,4 +89,30 @@ public class CatalogServiceImpl implements CatalogService{
                 setFollowers(x.getFollowers());
             }}).collect(Collectors.toList());
     }
+
+    @Override
+    public UserTO create(UserTO userTO) {
+        UserDO userDO = new UserDO();
+        userDO.setIdUser(userTO.getIdUser());
+        userDO.setLogin(userTO.getLogin());
+        userDO.setAvatarUrl(userTO.getAvatarUrl());
+        userDO.setFollowers(userTO.getFollowers());
+        userDO.setFollowing(userTO.getFollowing());
+        userDO.setName(userTO.getName());
+        userDAO.create(userDO);
+        return userTO;
+    }
+
+    @Override
+    public UserTO findByLogin(long id) {
+        UserDO userDO = userDAO.getById(id);
+        UserTO userTO = new UserTO();
+        userTO.setName(userDO.getName());
+        userTO.setFollowers(userDO.getFollowers());
+        userTO.setIdUser(userDO.getIdUser());
+        userTO.setAvatarUrl(userDO.getAvatarUrl());
+        userTO.setFollowing(userDO.getFollowing());
+        userTO.setLogin(userDO.getLogin());
+        return userTO;
+    }
 }

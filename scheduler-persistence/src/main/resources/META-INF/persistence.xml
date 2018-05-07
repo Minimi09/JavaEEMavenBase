@@ -7,6 +7,8 @@
 
 
         <class>mx.com.arquitectura.base.model.UserDO</class>
+        <class>mx.com.arquitectura.base.model.UserExamDO</class>
+        <class>mx.com.arquitectura.base.model.PermissionDO</class>
 
         <properties>
             <property name="eclipselink.logging.level" value="FINE" />

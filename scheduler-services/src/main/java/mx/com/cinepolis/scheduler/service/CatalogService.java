@@ -29,4 +29,8 @@ public interface CatalogService {
 
     List<UserTO> getAllUsers ();
 
+    UserTO create(UserTO userTO);
+
+    UserTO findByLogin (long id);
+
 }

@@ -3,6 +3,7 @@ package mx.com.cinepolis.schedule.rest;
 import mx.com.cinepolis.scheduler.commons.to.*;
 import mx.com.cinepolis.scheduler.facade.CatalogFacadeEJB;
 import mx.com.cinepolis.scheduler.facade.GitHubFacadeEJB;
+import mx.com.cinepolis.scheduler.facade.UserExamFacadeEJB;
 
 import javax.ejb.EJB;
 import javax.ws.rs.*;
@@ -19,16 +20,58 @@ public class CatalogRest {
     private CatalogFacadeEJB catalogFacadeEJB;
     @EJB
     private GitHubFacadeEJB gitHubFacadeEJB;
+    @EJB
+    private UserExamFacadeEJB userExamFacadeEJB;
 
     @GET
     @Produces("application/json")
-    @Path("/user")
-    public Response getSimpleCatalog()
+    @Path ("/loginUser")
+     public Response getUserLogin(@Context UriInfo ui)
     {
-        UserTO userTO = catalogFacadeEJB.getSimpleUser();
-        return Response.ok().entity(userTO).build();
+        MultivaluedMap<String, String> queryParams = ui.getQueryParameters();
+        String login = queryParams.getFirst("usr");
+        String pswd = queryParams.getFirst("pwd");
+        System.out.println(login);
+        UserExamTO userExamTO = userExamFacadeEJB.getUser(login, pswd);
+        return Response.ok().entity(userExamTO).build();
     }
 
+    @POST
+    @Path ("/addUser")
+    @Consumes ("application/json")
+    public Response addUserExam (UserExamTO userExamTO){
+        UserExamTO userExamTO1 = userExamFacadeEJB.addUser(userExamTO);
+        return Response.ok().entity(userExamTO1).build();
+    }
+
+    @POST
+    @Path ("/dropUser/{user}")
+    @Consumes ("application/json")
+    public void dropUser (@PathParam("user") String user){
+        userExamFacadeEJB.dropUser(user);
+        //return Response.ok().entity(userExamTO1).build();
+    }
+
+    @POST
+    @Path ("/alterUser")
+    @Consumes ("application/json")
+    public Response alterUser (UserExamTO userExamTO){
+        UserExamTO userExamTO1 = userExamFacadeEJB.alterUser(userExamTO);
+        return Response.ok().entity(userExamTO1).build();
+    }
+
+    @GET
+    @Produces("application/json")
+    @Path("/allusersexam")
+    public Response getAllUsersExam()
+    {
+        List<UserExamTO> usersList = userExamFacadeEJB.findAllUsers();
+
+        GenericEntity<List<UserExamTO>> entity =
+                new GenericEntity<List<UserExamTO>>(usersList) {};
+
+        return Response.ok().entity(entity).build();
+    }
 
     @GET
     @Produces("application/json")
@@ -92,6 +135,16 @@ public class CatalogRest {
         return Response.ok().entity(formularioTO1).build();
     }
 
+    @POST
+    @Path ("/create")
+    @Consumes ("application/json")
+    public Response create (UserTO userTO)
+    {
+        UserTO userTO1 = catalogFacadeEJB.create(userTO);
+        return Response.ok().entity(userTO1).build();
+
+    }
+
     @GET
     @Produces("application/json")
     @Path("/allusers")
@@ -103,5 +156,14 @@ public class CatalogRest {
                 new GenericEntity<List<UserTO>>(usersList) {};
 
         return Response.ok().entity(entity).build();
+    }
+
+    @GET
+    @Produces("application/json")
+    @Path("/find/{id}")
+    public Response findByLogin(@PathParam("id") long id)
+    {
+        UserTO user = catalogFacadeEJB.findByLogin(id);
+        return Response.ok().entity(user).build();
     }
 }

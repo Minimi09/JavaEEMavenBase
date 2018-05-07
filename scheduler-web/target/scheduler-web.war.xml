@@ -25,17 +25,17 @@
   <dir sourceOnDisk="C:\Users\JAVA1\Documents\Repositorio\JavaEEMavenBase\scheduler-web\src\main\webapp" targetInArchive="/" />
   <file sourceOnDisk="C:\Users\JAVA1\Documents\Repositorio\JavaEEMavenBase\scheduler-web\src\main\webapp\WEB-INF\web.xml" targetInArchive="/WEB-INF/web.xml" />
   <file sourceOnDisk="C:\Users\JAVA1\Documents\Repositorio\JavaEEMavenBase\scheduler-web\src\main\webapp\WEB-INF\weblogic.xml" targetInArchive="/WEB-INF/weblogic.xml" />
-  <archive targetInArchive="/WEB-INF/lib/scheduler-commons-1.0.jar">
-    <dir sourceOnDisk="C:\Users\JAVA1\Documents\Repositorio\JavaEEMavenBase\scheduler-commons\target\classes" targetInArchive="/" />
+  <archive targetInArchive="/WEB-INF/lib/scheduler-model-1.0.jar">
+    <dir sourceOnDisk="C:\Users\JAVA1\Documents\Repositorio\JavaEEMavenBase\scheduler-model\target\classes" targetInArchive="/" />
   </archive>
   <archive targetInArchive="/WEB-INF/lib/scheduler-services-1.0.jar">
     <dir sourceOnDisk="C:\Users\JAVA1\Documents\Repositorio\JavaEEMavenBase\scheduler-services\target\classes" targetInArchive="/" />
   </archive>
+  <archive targetInArchive="/WEB-INF/lib/scheduler-commons-1.0.jar">
+    <dir sourceOnDisk="C:\Users\JAVA1\Documents\Repositorio\JavaEEMavenBase\scheduler-commons\target\classes" targetInArchive="/" />
+  </archive>
   <archive targetInArchive="/WEB-INF/lib/scheduler-persistence-1.0.jar">
     <dir sourceOnDisk="C:\Users\JAVA1\Documents\Repositorio\JavaEEMavenBase\scheduler-persistence\target\classes" targetInArchive="/" />
-  </archive>
-  <archive targetInArchive="/WEB-INF/lib/scheduler-model-1.0.jar">
-    <dir sourceOnDisk="C:\Users\JAVA1\Documents\Repositorio\JavaEEMavenBase\scheduler-model\target\classes" targetInArchive="/" />
   </archive>
 </archive>
 

@@ -32,4 +32,15 @@ public class CatalogFacadeEJB {
         return catalogService.getAllUsers();
     }
 
+    public UserTO create (UserTO userTO)
+    {
+
+        return catalogService.create(userTO);
+    }
+
+    public UserTO findByLogin(long id)
+    {
+
+        return catalogService.findByLogin(id);
+    }
 }
